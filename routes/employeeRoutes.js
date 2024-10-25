@@ -20,3 +20,6 @@ router.put('/:id',authenticateJWT, employeeController.updateEmployee);
 router.delete('/:id',authenticateJWT, employeeController.deleteEmployee);
 
 export default router;
+
+
+

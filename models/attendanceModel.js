@@ -23,6 +23,7 @@ const Attendance = sequelize.define(
       type: DataTypes.DATEONLY,
       allowNull: false,
     },
+    
     status: {
       type: DataTypes.ENUM("Present", "Absent", "Late", "On Leave"),
       allowNull: false,

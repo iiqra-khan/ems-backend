@@ -94,7 +94,7 @@ const leaveController = {
       if (decodedToken.user_type == "Employee") {
         return res
           .status(403) // 403 Forbidden for insufficient privileges
-          .json({ message: "You are not authorized to update leave details" });
+          .json({ message: "You are not authorized to update the leave status" });
       }
 
 
