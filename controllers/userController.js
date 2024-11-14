@@ -255,7 +255,8 @@ const authController = {
 
   logout: async (req, res) => {
     try {
-      // Assuming req.user.id is populated by the authentication middleware
+
+      
       const userId = req.user.id;
   
       // Remove the refresh token from the database for the logged-in user

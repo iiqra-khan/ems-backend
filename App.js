@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Load Routes Dynamically
-const loadRoutes = async () => {
+(async () => {
   // Dynamically import the route modules
   const employeeRoutes = (await import("./routes/employeeRoutes.js")).default;
   const attendanceRoutes = (await import("./routes/attendanceRoutes.js"))
@@ -34,10 +34,7 @@ const loadRoutes = async () => {
   app.use("/user", registerRoutes);
   app.use("/user", loginRoutes);
   app.use("/user", updateRoutes);
-};
-
-// Call loadRoutes to set up all routes
-loadRoutes();
+})();
 
 // Start the server
 const PORT = process.env.PORT || 3000;
