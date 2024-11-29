@@ -2,9 +2,8 @@ import Review from "../models/reviewModel.js";
 import jwt from "jsonwebtoken";
 
 const secretKey =
-  process.env.JWT_SECRET ||
-  "e94f3d1a6f4a8f1b5c7c6a9d6f4e2a9b5e7c2f3d6b8f9e1a7b2d8c1e9f3a7d4";
-
+  process.env.JWT_SECRET 
+  
 const reviewController = {
   // Create a new review
   createReview: async (req, res) => {

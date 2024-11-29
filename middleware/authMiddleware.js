@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 
-const secretKey1 = process.env.JWT_SECRET || "e94f3d1a6f4a8f1b5c7c6a9d6f4e2a9b5e7c2f3d6b8f9e1a7b2d8c1e9f3a7d4";
-const secretKey2 = process.env.JWT_REFRESH_SECRET || "3a8d1f5e4c6b8a7d9f2e7c1a6f4d9b5c6e2a8f3c7e9d1b4a3f8e5c7b6a1d3f2e7";
+const secretKey1 = process.env.JWT_SECRET 
 
 const authenticateJWT = async (req, res, next) => {
   try {

@@ -18,8 +18,7 @@ app.use(cookieParser());
 (async () => {
   // Dynamically import the route modules
   const employeeRoutes = (await import("./routes/employeeRoutes.js")).default;
-  const attendanceRoutes = (await import("./routes/attendanceRoutes.js"))
-    .default;
+  const attendanceRoutes = (await import("./routes/attendanceRoutes.js")).default;
   const leaveRoutes = (await import("./routes/leaveRoutes.js")).default;
   const reviewRoutes = (await import("./routes/reviewRoutes.js")).default;
   const registerRoutes = (await import("./routes/authRoutes.js")).default;
