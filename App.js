@@ -24,6 +24,7 @@ app.use(cookieParser());
   const registerRoutes = (await import("./routes/authRoutes.js")).default;
   const loginRoutes = (await import("./routes/authRoutes.js")).default;
   const updateRoutes = (await import("./routes/authRoutes.js")).default;
+  const genModelRoutes = (await import("./routes/genModelRoutes.js")).default;
 
   // Assigning the route modules to the app
   app.use("/api/employees", employeeRoutes);
@@ -33,6 +34,7 @@ app.use(cookieParser());
   app.use("/user", registerRoutes);
   app.use("/user", loginRoutes);
   app.use("/user", updateRoutes);
+  app.use("/api/generate", genModelRoutes);
 })();
 
 // Start the server
